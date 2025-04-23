@@ -3,6 +3,7 @@
 int main(){
 
     int i = 1, escolhanumero, escolhajogador;
+    int movimentocavalo = 1;
 
     // menu escolha numero de casas a se mover
     printf("*** DESAFIO XADREZ ***\n");
@@ -15,6 +16,7 @@ int main(){
     printf("1. TORRE\n");
     printf("2. BISPO\n");
     printf("3. RAINHA\n");
+    printf("4. CAVALO\n");
     scanf("%d", &escolhajogador);
 
 
@@ -41,12 +43,23 @@ switch (escolhajogador)
         printf("Rainha moveu-se para Esquerda!\n");
     }
     break;
+  
+  case 4:
+      //mover cavalo
+      while (movimentocavalo--)
+      {
+        for (int i = 0; i < 2; i++){
+          printf("Cavalo se moveu para Baixo!\n");
+        }
+        printf("Cavalo se moveu para Esquerda!\n");
+      }
+      break;
      default:
        printf("*** Opçao inválida! ***\n");
 
 }
     
-    
+   
     
     
     
